@@ -36,8 +36,9 @@ auto_dark_mode: true
 # You can use this option to choose between Serif, Sans Serif, or Open Sans fonts.
 font: "Open Sans" # or "Serif" or "Sans Serif"
 
-# Google Analytics ID 
-# Configure your own tag, free from https://analytics.google.com/
+# Google Analytics ID
+# Please remove this if you don't use Google Analytics
+google_analytics: true #G-9HLSWQ57HT
 
 
 # Use this project as a remote theme for GitHub Pages
