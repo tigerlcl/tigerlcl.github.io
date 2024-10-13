@@ -37,8 +37,8 @@ auto_dark_mode: true
 font: "Open Sans" # or "Serif" or "Sans Serif"
 
 # Google Analytics ID 
-# Please configure your own tag in homepage.html, below is deprecated 
-# google_analytics: xxxx # 
+# Configure your own tag, free from https://analytics.google.com/
+google_analytics: G-9HLSWQ57HT 
 
 # Use this project as a remote theme for GitHub Pages
 # See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
