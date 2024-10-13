@@ -3,7 +3,7 @@ layout: homepage
 ---
 
 <div style="font-family: 'Open Sans', sans-serif; font-size: 1.2em; font-weight: normal; font-style: italic; margin: 20px 0;">
-    <p>In me, the tiger sniffs the rose. <span style="font-size: 0.8em;">- Siegfried Sassoon</span></p>
+    <p>🌟 In me the tiger sniffs the rose. <span style="font-size: 0.8em;">- Siegfried Sassoon</span></p>
     <!-- <p>心有猛虎 细嗅蔷薇<span style="font-size: 0.8em;"> - 西格里夫·萨松</span></p> -->
 </div>
 
@@ -14,7 +14,7 @@ I am a Ph.D. student at the [Data Science and Analytics Thrust](https://dsa.hkus
 Currently, I am supervised by [Prof. Nan Tang](https://nantang.github.io/) and co-supervised by [Prof. Yuyu Luo](https://luoyuyu.vip/).
 I received my B.S. degree in Information Engineering (minor in Computer Science) from the Chinese University of Hong Kong (CUHK) in 2020.
 
-I was born and raised in Kunming, Yunnan. Then I moved to Hong Kong 🇭🇰 for my undergraduate study. After graduation, I worked as a Data Scientist @ [Measurable AI](https://measurable.ai/en-US/), a local startup company, for several years. I was gracefully admitted to HKUST(GZ) in 2024 Spring.
+I was born and raised in Kunming, Yunnan. Then I moved to Hong Kong 🇭🇰 for my undergraduate study. After graduation, I worked as a Data Scientist @ [Measurable AI](https://measurable.ai/en-US/), a local startup company, for several years. I was gracefully admitted to HKUST(GZ) in Spring 2024.
 
 ## Research Interests
 I focus on chat-based data preparation solutions using the Large Language Models. Below are some stunning topics I am working on:
