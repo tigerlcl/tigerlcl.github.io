@@ -21,8 +21,12 @@
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    {% if site.font == "Sans Serif" %}
+    {% if site.font == "Serif" %}
+    <link rel="stylesheet" href="./assets/css/font.css">
+    {% elsif site.font == "Sans Serif" %}
     <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
+    {% elsif site.font == "Open Sans" %}
+    <link rel="stylesheet" href="./assets/css/font_open_sans.css">
     {% else %}
     <link rel="stylesheet" href="./assets/css/font.css">
     {% endif %}
@@ -43,7 +47,7 @@
         <a class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
         {% endif %}
 
-        <h1>{{ site.title }}</h1>
+        <h1>{{ site.title }} 🐯</h1>
 
         {% if site.position %}
         <position style="font-size:1.10rem;">{{ site.position }}</position>
@@ -54,7 +58,10 @@
         <br>
         {% endif %}
         {% if site.email %}
-        <email>{{ site.email }}</email>
+        <email>
+          <i class="fas fa-envelope" style="margin-right: 5px;"></i>
+          <a href="{{ site.email }}">{{ site.email | remove: 'mailto:' }}</a>
+        </email>
         {% endif %}
 
         <br>

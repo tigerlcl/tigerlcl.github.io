@@ -1,8 +1,8 @@
 # Basic Information 
-title: Changlun LI
+title: Changlun LI, Tiger
 position: Ph.D. Student
 affiliation: Hong Kong University of Science and Technology (Guangzhou)
-email: cli942@connect.hkust-gz.edu.cn
+email: mailto:cli942@connect.hkust-gz.edu.cn
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -33,12 +33,12 @@ enable_footnote: false
 auto_dark_mode: true
 
 # Font
-# You can use this option to choose between Serif or Sans Serif fonts.
-font: "Sans Serif" # or "Serif"
+# You can use this option to choose between Serif, Sans Serif, or Open Sans fonts.
+font: "Open Sans" # or "Serif" or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
-# google_analytics: UA-111540567-4
+google_analytics: G-9HLSWQ57HT
 
 # Use this project as a remote theme for GitHub Pages
 # See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
@@ -48,10 +48,6 @@ remote_theme: yaoyao-liu/minimal-light
 exclude:
   - Gemfile
   - Gemfile.lock
-  # - README.md
-  # - README_zh_Hans.md
-  # - README_zh_Hant.md
-  # - README_de.md
   - LICENSE
   - minimal-light.gemspec
   - html_source_file/
