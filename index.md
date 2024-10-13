@@ -2,7 +2,7 @@
 layout: homepage
 ---
 
-<div style="font-family: 'Open Sans', sans-serif; font-size: 1.2em; font-weight: normal; font-style: italic; margin: 20px 0;">
+<div style="font-size: 1.2em; font-weight: normal; font-style: italic; margin: 20px 0;">
     <p>🌟 In me the tiger sniffs the rose. <span style="font-size: 0.8em;">- Siegfried Sassoon</span></p>
     <!-- <p>心有猛虎 细嗅蔷薇<span style="font-size: 0.8em;"> - 西格里夫·萨松</span></p> -->
 </div>
