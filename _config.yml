@@ -38,7 +38,7 @@ font: "Open Sans" # or "Serif" or "Sans Serif"
 
 # Google Analytics ID 
 # Configure your own tag, free from https://analytics.google.com/
-google_analytics: G-9HLSWQ57HT 
+
 
 # Use this project as a remote theme for GitHub Pages
 # See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
