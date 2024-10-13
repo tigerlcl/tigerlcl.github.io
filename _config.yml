@@ -37,8 +37,8 @@ auto_dark_mode: true
 font: "Open Sans" # or "Serif" or "Sans Serif"
 
 # Google Analytics ID
-# Please remove this if you don't use Google Analytics
-# google_analytics: G-9HLSWQ57HT
+# Please comment below line if you don't use Google Analytics
+google_analytics: G-9HLSWQ57HT
 
 
 # Use this project as a remote theme for GitHub Pages
