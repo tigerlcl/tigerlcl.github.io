@@ -6,7 +6,7 @@ email: mailto:tigerlicuhk@gmail.com
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: tiger li, changlun li, 李昌伦
+keywords: tiger li, changlun li
 description: Hi, welcome to my homepage!
 canonical: https://tigerlcl.github.io/
 
@@ -38,7 +38,7 @@ font: "Open Sans" # or "Serif" or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
-google_analytics: true #G-9HLSWQ57HT
+# google_analytics: G-9HLSWQ57HT
 
 
 # Use this project as a remote theme for GitHub Pages
