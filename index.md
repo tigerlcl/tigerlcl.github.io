@@ -12,7 +12,7 @@ layout: homepage
 
 I am a Ph.D. student at the [Data Science and Analytics Thrust](https://dsa.hkust-gz.edu.cn/), Information Hub, The Hong Kong University of Science and Technology (Guangzhou). 
 Currently, I am supervised by [Prof. Nan Tang](https://nantang.github.io/) and co-supervised by [Prof. Yuyu Luo](https://luoyuyu.vip/).
-I received my B.S. degree in Information Engineering (minor in Computer Science) from the Chinese University of Hong Kong (CUHK) in 2020.
+I received my B.Eng degree in Information Engineering (minor in Computer Science) from the Chinese University of Hong Kong (CUHK) in 2020.
 
 I was born and raised in Kunming, Yunnan. Then I moved to Hong Kong 🇭🇰 for my undergraduate study. After graduation, I worked as a Data Scientist @ [Measurable AI](https://measurable.ai/en-US/), a local startup company, for several years. I was gracefully admitted to HKUST(GZ) in Spring 2024.
 
@@ -25,11 +25,6 @@ You could visit our lab homepage for more information: [HKUST(GZ)-DIAL](https://
 
 ## News
 - **[Oct. 2024]** Personal page is online! Publication coming soon.
-
-<!-- - **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019. -->
 
 <!-- {% include_relative _includes/publications.md %} -->
 

@@ -6,5 +6,3 @@ Gemfile.lock
 .jekyll-cache
 git-update.sh
 
-# template files
-README*.md
