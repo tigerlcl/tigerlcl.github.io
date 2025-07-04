@@ -14,17 +14,21 @@ I am a Ph.D. student at the [Data Science and Analytics Thrust](https://dsa.hkus
 Currently, I am supervised by [Prof. Nan Tang](https://nantang.github.io/) and co-supervised by [Prof. Yuyu Luo](https://luoyuyu.vip/).
 I received my B.Eng degree in Information Engineering (minor in Computer Science) from the Chinese University of Hong Kong (CUHK) in 2020.
 
-I was born and raised in Kunming, Yunnan. Then I moved to Hong Kong 🇭🇰 for my undergraduate study. After graduation, I worked as a Data Scientist @ [Measurable AI](https://measurable.ai/en-US/), a local startup company, for several years. I was gracefully admitted to HKUST(GZ) in Spring 2024.
+I was born and raised in Kunming, Yunnan. Then I got enrolled in The Chinese University of Hong Kong (CUHK) for my undergraduate study. After graduation, I worked as a Data Scientist @ [Measurable AI](https://measurable.ai/en-US/), a AI startup company, for several years. I was gracefully admitted to HKUST(GZ) in Spring 2024.
 
 ## Research Interests
-I focus on chat-based data preparation solutions using the Large Language Models. Below are some stunning topics I am working on:
-- **Data-centric Preparation:** Extraction, Wrangling, Transformation
-- **LLM-based Applications:** Prompt Engineering, RAG, Code Generation
+I focus on LLM-based Apps. Below are some stunning topics I am working on:
+
+- Good Data For AI: data cleaning and transformation.
+- Good AI For Research Services: tools, peer-review, and community.
+- Good AI For Fund Investment: Project Leader on [DeepFund](https://github.com/HKUSTDial/DeepFund).
 
 You could visit our lab homepage for more information: [HKUST(GZ)-DIAL](https://github.com/HKUSTDial).
 
 ## News
-- **[Oct. 2024]** Personal page is online! Publication coming soon.
+- **[Jul. 2025]** One paper is accepted by IJCAI 2025 FinLLM Workshop. See you in Guangzhou, Aug. 2025!
+- **[Jun. 2025]** Passed PhD qualifying exam. Milestone achieved!
+- **[Apr. 2025]** One paper is accepted by VLDB 2025. See you in London, Sept. 2025!
 
 <!-- {% include_relative _includes/publications.md %} -->
 
