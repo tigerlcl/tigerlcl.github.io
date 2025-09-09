@@ -1,22 +1,33 @@
 main:
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+  - title: Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation
+    authors: <strong>Changlun Li</strong>, Chenyu Yang, Yuyu Luo, Ju Fan, Nan Tang*
+    conference_short: VLDB 2025
+    conference: International Conference on Very Large Data Bases
+    pdf: https://www.vldb.org/pvldb/vol18/p2371-tang.pdf
+    code: https://github.com/HKUSTDial/megatran
+    image: ./assets/img/megatran.png
+    # notes: Accept
 
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+  - title: "Will LLMs be Professional at Fund Investment? DeepFund: A Live Arena Perspective"
+    authors: <strong>Changlun Li</strong>, Yao Shi, Yuyu Luo, Nan Tang*
+    conference_short: IJCAI 2025
+    conference: International Joint Conference on Artificial Intelligence
+    pdf: https://arxiv.org/pdf/2503.18313.pdf
+    code: https://github.com/HKUSTDial/DeepFund
+    image: ./assets/img/deepfund_v1.png
+    notes: FinLLM Workshop Oral Paper
+
+  - title: "Rise of the Community Champions: From Reviewer Crunch to Community Power"
+    authors: <strong>Changlun Li</strong>, Yao Shi, Yuyu Luo, Nan Tang
+    conference_short: arXiv 2025
+    pdf: https://arxiv.org/pdf/2503.18336.pdf
+    page: https://vision.panvas.fun/
+    image: ./assets/img/panvas.png
+
+  - title: "SketchFill: Sketch-Guided Code Generation for Imputing Derived Missing Values"
+    authors: Yunfan Zhang, <strong>Changlun Li</strong>, Yuyu Luo, Nan Tang
+    conference_short: arXiv 2024
+    pdf: https://arxiv.org/pdf/2412.19113.pdf
+    code: https://github.com/tigerlcl/llm-sketch
+    image: ./assets/img/sketchfill.jpg
