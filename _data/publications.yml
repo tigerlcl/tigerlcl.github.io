@@ -6,6 +6,7 @@ main:
     conference: International Conference on Very Large Data Bases
     pdf: https://www.vldb.org/pvldb/vol18/p2371-tang.pdf
     code: https://github.com/HKUSTDial/megatran
+    slide: ./assets/files/megatran-slide-v2.pdf
     image: ./assets/img/megatran.png
     # notes: Accept
 
