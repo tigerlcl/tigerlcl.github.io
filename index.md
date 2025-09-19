@@ -24,9 +24,10 @@ I focus on LLM-based application research. Below are some stunning topics I am w
 - Good AI For Fund Investment: Project Leader on [DeepFund](https://github.com/HKUSTDial/DeepFund).
 
 ## News
-- **[Jul. 2025]** One paper is accepted by IJCAI 2025 FinLLM Workshop. See you in Guangzhou, Aug. 2025!
+- **[Sep. 2025]** One paper is accepted by NeurIPS 2025. See you in San Diego, USA, in Dec. 2025!
+- **[Jul. 2025]** One paper is accepted by IJCAI 2025 FinLLM Workshop. See you in Guangzhou, China, in Aug. 2025!
 - **[Jun. 2025]** Passed PhD qualifying exam. Milestone achieved!
-- **[Apr. 2025]** One paper is accepted by VLDB 2025. See you in London, Sept. 2025!
+- **[Apr. 2025]** One paper is accepted by VLDB 2025. See you in London, United Kingdom, inSept. 2025!
 
 {% include_relative _includes/publications.md %}
 

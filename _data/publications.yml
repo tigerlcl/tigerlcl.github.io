@@ -1,4 +1,14 @@
 main:
+  - title: "Time Travel is Cheating: Going Live with DeepFund for Real-Time Fund Investment Benchmarking"
+    authors: <strong>Changlun Li</strong>, Yao Shi, Chen Wang, Qiqi Duan, Runke Ruan, Weijie Huang, Haonan Long, Lijun Huang, Yuyu Luo, Nan Tang*
+    conference_short: NeurIPS 2025
+    conference: Advances in Neural Information Processing Systems
+    pdf: https://arxiv.org/pdf/2505.11065
+    code: https://github.com/HKUSTDial/DeepFund
+    image: ./assets/img/deepfund_v2.png
+    notes: Poster Paper
+
+
 
   - title: Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation
     authors: <strong>Changlun Li</strong>, Chenyu Yang, Yuyu Luo, Ju Fan, Nan Tang*
@@ -8,7 +18,7 @@ main:
     code: https://github.com/HKUSTDial/megatran
     slide: ./assets/files/megatran-slide-v2.pdf
     image: ./assets/img/megatran.png
-    # notes: Accept
+    notes: Presented Oral + Poster
 
   - title: "Will LLMs be Professional at Fund Investment? DeepFund: A Live Arena Perspective"
     authors: <strong>Changlun Li</strong>, Yao Shi, Yuyu Luo, Nan Tang*
@@ -20,14 +30,14 @@ main:
     notes: FinLLM Workshop Oral Paper
 
   - title: "Rise of the Community Champions: From Reviewer Crunch to Community Power"
-    authors: <strong>Changlun Li</strong>, Yao Shi, Yuyu Luo, Nan Tang
+    authors: <strong>Changlun Li</strong>, Yao Shi, Yuyu Luo, Nan Tang*
     conference_short: arXiv 2025
     pdf: https://arxiv.org/pdf/2503.18336.pdf
     page: https://vision.panvas.fun/
     image: ./assets/img/panvas.png
 
   - title: "SketchFill: Sketch-Guided Code Generation for Imputing Derived Missing Values"
-    authors: Yunfan Zhang, <strong>Changlun Li</strong>, Yuyu Luo, Nan Tang
+    authors: Yunfan Zhang, <strong>Changlun Li</strong>, Yuyu Luo, Nan Tang*
     conference_short: arXiv 2024
     pdf: https://arxiv.org/pdf/2412.19113.pdf
     code: https://github.com/tigerlcl/llm-sketch
