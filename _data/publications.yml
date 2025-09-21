@@ -2,7 +2,7 @@ main:
   - title: "Time Travel is Cheating: Going Live with DeepFund for Real-Time Fund Investment Benchmarking"
     authors: <strong>Changlun Li</strong>, Yao Shi, Chen Wang, Qiqi Duan, Runke Ruan, Weijie Huang, Haonan Long, Lijun Huang, Yuyu Luo, Nan Tang*
     conference_short: NeurIPS 2025
-    conference: Advances in Neural Information Processing Systems
+    conference: Neural Information Processing Systems
     pdf: https://arxiv.org/pdf/2505.11065
     code: https://github.com/HKUSTDial/DeepFund
     image: ./assets/img/deepfund_v2.png
@@ -18,7 +18,7 @@ main:
     code: https://github.com/HKUSTDial/megatran
     slide: ./assets/files/megatran-slide-v2.pdf
     image: ./assets/img/megatran.png
-    notes: Presented Oral + Poster
+    notes: Oral with Poster
 
   - title: "Will LLMs be Professional at Fund Investment? DeepFund: A Live Arena Perspective"
     authors: <strong>Changlun Li</strong>, Yao Shi, Yuyu Luo, Nan Tang*
@@ -26,6 +26,7 @@ main:
     conference: International Joint Conference on Artificial Intelligence
     pdf: https://arxiv.org/pdf/2503.18313.pdf
     code: https://github.com/HKUSTDial/DeepFund
+    slide: ./assets/files/DeepFund-IJCAI.pdf
     image: ./assets/img/deepfund_v1.png
     notes: FinLLM Workshop Oral Paper
 
