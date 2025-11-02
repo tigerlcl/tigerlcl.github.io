@@ -12,7 +12,7 @@ layout: homepage
 
 I am a Ph.D. student at the [Data Science and Analytics Thrust](https://dsa.hkust-gz.edu.cn/), Information Hub, The Hong Kong University of Science and Technology (Guangzhou). 
 Currently, I am a member of the [DIAL](https://github.com/HKUSTDial), supervised by [Prof. Nan Tang](https://nantang.github.io/) and co-supervised by [Prof. Yuyu Luo](https://luoyuyu.vip/). 
-Also, I am the founder and CEO of [Paradoox AI](https://paradoox.ai/), a FinTech startup company focused on AI-driven fund investment and evaluation.
+<!-- Also, I am the founder and CEO of [Paradoox AI](https://paradoox.ai/), a FinTech startup company focused on AI-driven fund investment and evaluation. -->
 
 I focus on LLM-based application research. Below are some stunning topics I am working on: (1) Good Data For AI: data cleaning and transformation, see [MegaTran](https://github.com/HKUSTDial/megatran); (2) Good AI For Fund Investment: Project Leader on [DeepFund](https://github.com/HKUSTDial/DeepFund).
 

@@ -5,6 +5,7 @@ main:
     conference: Neural Information Processing Systems
     pdf: https://arxiv.org/pdf/2505.11065
     code: https://github.com/HKUSTDial/DeepFund
+    slide: ./assets/files/DeepFund-NeurIPS.pdf
     image: ./assets/img/deepfund_v2.png
     notes: Poster
 
