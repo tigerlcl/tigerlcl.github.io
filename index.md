@@ -9,9 +9,11 @@ layout: homepage
 
 
 ## About Me
-⛵️ **Education**: I am a Ph.D. Candidate at the [Data Science and Analytics Thrust](https://dsa.hkust-gz.edu.cn/), Information Hub, The Hong Kong University of Science and Technology (Guangzhou), and gracefully been supervised by [Prof. Nan Tang](https://nantang.github.io/) and co-supervised by [Prof. Yuyu Luo](https://luoyuyu.vip/). Before that, I was endorsed a honored bachelor degree in Information Engineering with minor in Computer Science at The Chinese University of Hong Kong in 2020. Then, I worked as a data scientist at [Measurable AI](https://www.measurable.ai/) for nearly 4 years.
+⛵️ **Education**: I am a Ph.D. Candidate at the [Data Science and Analytics Thrust](https://dsa.hkust-gz.edu.cn/) (DSA), Information Hub, The Hong Kong University of Science and Technology (Guangzhou). I have been gracefully supervised by [Prof. Nan Tang](https://nantang.github.io/) on conducting AI+Data research and co-supervised by [Prof. Yuyu Luo](https://luoyuyu.vip/). 
 
-📚 **Research**: I focus on applied AI/LLM application research. Below are some stunning research topics I am working on: 
+Before that, I was endorsed a honored bachelor degree in Information Engineering with minor in Computer Science at The Chinese University of Hong Kong in 2020. Then, I worked as a data scientist at [Measurable AI](https://www.measurable.ai/), where I derive consumer insights from transactional data of emerging markets for nearly 4 years.
+
+📚 **Research**: I focus on applied AI/LLM research, including but not limited to: 
 - Good Data For AI: data cleaning and transformation, see [MegaTran](https://github.com/HKUSTDial/megatran); 
 - Good AI For Fund Investment: Project Leader on [DeepFund](https://github.com/HKUSTDial/DeepFund).
 
@@ -20,6 +22,7 @@ layout: homepage
 💬 I am open to collaboration on any of the above topics, e.g., academic contributions, project consultation, open-source community, peer-review, etc. Please feel free to contact me via email.
 
 ## News
+- **[Jan. 2026]** Delighted to receive the annual DSA Research Excellence Award for outstanding performance in 2025!
 - **[Sep. 2025]** One paper is accepted by NeurIPS 2025. See you in San Diego, USA in Dec. 2025!
 - **[Jul. 2025]** One paper is accepted by IJCAI 2025 FinLLM Workshop. See you in Guangzhou, China in Aug. 2025!
 - **[Jun. 2025]** Passed PhD qualifying exam. Milestone achieved!

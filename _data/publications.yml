@@ -36,7 +36,7 @@ main:
     conference_short: arXiv 2025
     pdf: https://arxiv.org/pdf/2503.18336.pdf
     page: https://vision.panvas.fun/
-    image: ./assets/img/panvas.png
+    image: ./assets/img/panvas.jpg
 
   - title: "SketchFill: Sketch-Guided Code Generation for Imputing Derived Missing Values"
     authors: Yunfan Zhang, <strong>Changlun Li</strong>, Yuyu Luo, Nan Tang*
