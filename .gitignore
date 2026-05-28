@@ -4,10 +4,3 @@ dist
 .astro
 .vercel
 .netlify
-
-_site
-.sass-cache
-Gemfile.lock
-*.gem
-.jekyll-cache
-git-update.sh
