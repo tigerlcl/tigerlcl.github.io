@@ -1,0 +1,13 @@
+<button id="theme-toggle" class="rounded-full border border-zinc-300 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-700 transition hover:border-zinc-950 hover:text-zinc-950 dark:border-line dark:text-mist dark:hover:border-white dark:hover:text-white" aria-label="Toggle dark mode">
+  <span class="dark:hidden">Dark</span>
+  <span class="hidden dark:inline">Light</span>
+</button>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('#theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const nextIsDark = !document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark', nextIsDark);
+    localStorage.setItem('theme', nextIsDark ? 'dark' : 'light');
+  });
+</script>

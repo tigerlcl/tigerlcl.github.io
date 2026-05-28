@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --black: #000000ff;
+    --prussian-blue: #14213dff;
+    --orange: #fca311ff;
+    --alabaster-grey: #e5e5e5ff;
+    --white: #ffffffff;
+  }
+
+  :root.dark {
+    color-scheme: dark;
+  }
+
+  html {
+    text-rendering: geometricPrecision;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply transition;
+  }
+
+  .nav-link:hover {
+    color: var(--orange);
+  }
+
+  .aurora-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      100deg,
+      var(--prussian-blue) 0%,
+      var(--black) 36%,
+      var(--orange) 72%,
+      var(--prussian-blue) 100%
+    );
+  }
+
+  :root.dark .aurora-text {
+    background-image: linear-gradient(
+      100deg,
+      var(--white) 0%,
+      var(--alabaster-grey) 34%,
+      var(--orange) 72%,
+      #ffd08a 100%
+    );
+  }
+
+  .aurora-kicker {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, var(--prussian-blue), var(--orange));
+  }
+
+  .aurora-heading {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      105deg,
+      var(--black) 0%,
+      var(--prussian-blue) 48%,
+      var(--orange) 100%
+    );
+  }
+
+  :root.dark .aurora-heading {
+    background-image: linear-gradient(
+      105deg,
+      #ffffff 0%,
+      var(--alabaster-grey) 40%,
+      var(--orange) 100%
+    );
+  }
+
+  .metric-card {
+    @apply rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-line dark:bg-black/20;
+  }
+
+  .metric-card span,
+  .card-kicker {
+    @apply block text-[0.68rem] font-bold uppercase tracking-[0.28em];
+    background-image: linear-gradient(90deg, var(--prussian-blue), var(--orange));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .metric-card strong {
+    @apply mt-2 block font-serif text-xl font-medium tracking-[-0.03em];
+  }
+
+  .info-card,
+  .bento-card,
+  .publication-card {
+    @apply rounded-[1.6rem] border border-zinc-200 bg-white/75 p-6 transition duration-300 dark:border-line dark:bg-white/[0.035];
+  }
+
+  .info-card h3 {
+    @apply mt-3 font-serif text-2xl tracking-[-0.04em];
+  }
+
+  .info-card p:not(.card-kicker) {
+    @apply mt-3 text-sm leading-7 text-zinc-600 dark:text-mist;
+  }
+
+  .bento-card {
+    @apply flex min-h-64 flex-col p-7 hover:-translate-y-1;
+  }
+
+  .bento-card:hover,
+  .publication-card:hover {
+    border-color: var(--orange);
+  }
+
+  .publication-card {
+    @apply p-6;
+  }
+
+  .filter-pill {
+    @apply rounded-full border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-600 transition dark:border-line dark:text-mist;
+  }
+
+  .filter-pill:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+  .filter-pill[aria-pressed='true'] {
+    border-color: var(--prussian-blue);
+    background: var(--prussian-blue);
+    color: var(--white);
+  }
+
+  :root.dark .filter-pill[aria-pressed='true'] {
+    border-color: var(--orange);
+    background: var(--orange);
+    color: var(--black);
+  }
+
+  .tech-badge {
+    @apply rounded-full px-3 py-1 text-xs font-semibold;
+    border: 1px solid color-mix(in srgb, var(--orange) 34%, transparent);
+    color: var(--prussian-blue);
+  }
+
+  :root.dark .tech-badge {
+    color: var(--alabaster-grey);
+    border-color: color-mix(in srgb, var(--orange) 48%, transparent);
+  }
+}

@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AboutCards from '../components/AboutCards.astro';
+import BentoGrid from '../components/BentoGrid.astro';
+import Hero from '../components/Hero.astro';
+import PublicationList from '../components/PublicationList.astro';
+import Timeline from '../components/Timeline.astro';
+
+const publications = (await getCollection('publications')).sort((a, b) => b.data.year - a.data.year);
+const projects = (await getCollection('projects')).sort((a, b) => Number(b.data.featured) - Number(a.data.featured));
+---
+<BaseLayout>
+  <Hero />
+  <AboutCards />
+  <PublicationList publications={publications} />
+  <BentoGrid projects={projects} />
+  <Timeline />
+</BaseLayout>

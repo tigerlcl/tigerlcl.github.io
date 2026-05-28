@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+}
+const { posts } = Astro.props;
+---
+<section class="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+  <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+    <SectionHeading eyebrow="Blog / Notes" title="Technical writing for AI systems." description="Long-form notes powered by Astro content collections and typography-first layouts." />
+    <a class="mb-10 text-sm font-semibold text-zinc-700 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-950 dark:text-mist dark:decoration-line dark:hover:text-white" href="/blog/">All notes</a>
+  </div>
+  <div class="grid gap-4 md:grid-cols-3">
+    {posts.slice(0, 3).map((post) => (
+      <a href={`/blog/${post.slug}/`} class="info-card block hover:-translate-y-1">
+        <p class="card-kicker">{post.data.pubDate.toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+        <h3>{post.data.title}</h3>
+        <p>{post.data.description}</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          {post.data.tags.map((tag) => <span class="tech-badge">{tag}</span>)}
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

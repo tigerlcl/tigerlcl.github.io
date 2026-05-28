@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import IconLink from './IconLink';
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+  projects: CollectionEntry<'projects'>[];
+}
+const { projects } = Astro.props;
+const cardSpans = ['lg:col-span-7', 'lg:col-span-5', 'lg:col-span-6', 'lg:col-span-6'];
+---
+<section id="artifacts" class="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+  <SectionHeading eyebrow="Artifacts & Engineering" title="Open research systems, live benchmarks, and FinTech codebases." description="A bento grid of reusable engineering artifacts behind the research agenda." />
+  <div class="grid auto-rows-fr gap-4 md:grid-cols-2 lg:grid-cols-12">
+    {projects.map(({ data }, index) => (
+      <article class:list={['bento-card', cardSpans[index] ?? 'lg:col-span-4']}>
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="card-kicker">{data.category}</p>
+            <h3 class="mt-3 font-serif text-3xl tracking-[-0.04em]">{data.title}</h3>
+          </div>
+          <div class="flex gap-2">
+            {data.links.github && <IconLink href={data.links.github} label="GitHub" icon="github" />}
+            {data.links.paper && <IconLink href={data.links.paper} label="Paper" icon="paper" />}
+            {data.links.demo && <IconLink href={data.links.demo} label="Demo" icon="external" />}
+          </div>
+        </div>
+        <p class="mt-4 text-sm font-medium text-zinc-800 dark:text-zinc-200">{data.tagline}</p>
+        <p class="mt-3 text-sm leading-7 text-zinc-600 dark:text-mist">{data.description}</p>
+        <div class="mt-auto flex flex-wrap gap-2 pt-6">
+          {data.stack.map((item) => <span class="tech-badge">{item}</span>)}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

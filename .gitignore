@@ -1,8 +1,13 @@
+node_modules
+.DS_Store
+dist
+.astro
+.vercel
+.netlify
+
 _site
 .sass-cache
 Gemfile.lock
 *.gem
-.DS_Store
 .jekyll-cache
 git-update.sh
-

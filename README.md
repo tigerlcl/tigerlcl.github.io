@@ -1,9 +1,22 @@
-# Academic Page Repo
+# Changlun Li Academic Website
 
-Author: Changlun Li
+Ultra-modern academic and research personal website built with Astro, Tailwind CSS, content collections, and Lucide React icons.
 
-This repository contains the source code for an academic personal homepage built using the [Minimal-light](https://github.com/yaoyao-liu/minimal-light) theme. It is designed to provide a simple and elegant layout for showcasing academic work, research interests, and personal information. 
+## Commands
 
-All copyrights on assets are reserved. Licensed under the MIT License.
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
 
+## Content Editing
 
+Update research papers, engineering artifacts, and notes without touching layout code:
+
+- `src/content/publications/`
+- `src/content/projects/`
+- `src/content/blog/`
+
+The site deploys to GitHub Pages through `.github/workflows/deploy.yml`.
