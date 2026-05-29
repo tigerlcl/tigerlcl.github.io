@@ -1,6 +1,6 @@
-# Changlun Li Academic Website
+# Personal Website
 
-Ultra-modern academic and research personal website built with Astro, Tailwind CSS, content collections, and Lucide React icons.
+Static personal website built with Astro, Tailwind CSS, content collections, and React icons.
 
 ## Commands
 
@@ -13,7 +13,7 @@ npm run preview
 
 ## Content Editing
 
-Update research papers, engineering artifacts, and notes without touching layout code:
+Update site content without touching layout code:
 
 - `src/content/publications/`
 - `src/content/projects/`
