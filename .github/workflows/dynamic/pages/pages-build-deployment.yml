@@ -1,5 +1,0 @@
-name: disabled - pages-build-deployment
-on: none
-
-# Disabled because Jekyll is no longer used and this workflow attempted to process .astro source files,
-# causing GitHub Pages Jekyll to fail. The site is built and deployed via .github/workflows/deploy.yml (Astro build).
