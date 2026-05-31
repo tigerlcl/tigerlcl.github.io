@@ -53,4 +53,13 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { publications, projects, blog };
+const achievements = defineCollection({
+  type: 'content',
+  schema: z.object({
+    date: z.date(),
+    displayDate: z.string(),
+    briefing: z.string(),
+  }),
+});
+
+export const collections = { publications, projects, blog, achievements };

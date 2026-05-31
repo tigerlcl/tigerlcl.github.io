@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+  achievements: CollectionEntry<'achievements'>[];
+}
+
+const { achievements } = Astro.props;
+---
+<section id="achievements" class="mx-auto max-w-7xl px-5 py-16 sm:px-8">
+  <SectionHeading
+    eyebrow="Recent"
+    title="Achievements"
+    description="Latest updates in a compact, chronological feed."
+  />
+  <div class="publication-card">
+    <ol class="space-y-4">
+      {achievements.slice(0, 5).map(({ data }) => (
+        <li class="flex flex-col gap-2 border-b border-zinc-200 pb-4 last:border-b-0 last:pb-0 dark:border-line sm:flex-row sm:items-baseline">
+          <time class="shrink-0 font-mono text-sm font-semibold text-zinc-500 dark:text-mist">
+            [{data.displayDate}]
+          </time>
+          <p class="text-sm leading-7 text-zinc-700 dark:text-zinc-200">{data.briefing}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

@@ -58,6 +58,11 @@
     background-image: linear-gradient(90deg, var(--prussian-blue), var(--orange));
   }
 
+  :root.dark .aurora-kicker {
+    background-image: linear-gradient(90deg, var(--alabaster-grey) 0%, #ffd08a 48%, var(--orange) 100%);
+    filter: drop-shadow(0 0 10px color-mix(in srgb, var(--orange) 22%, transparent));
+  }
+
   .aurora-heading {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(
@@ -88,6 +93,12 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  :root.dark .metric-card span,
+  :root.dark .card-kicker {
+    background-image: linear-gradient(90deg, var(--alabaster-grey), #ffd08a, var(--orange));
+    filter: drop-shadow(0 0 8px color-mix(in srgb, var(--orange) 18%, transparent));
   }
 
   .metric-card strong {
