@@ -1,0 +1,39 @@
+---
+import { translator, type Locale } from '../../i18n/ui';
+interface Props { locale?: Locale; }
+const { locale = 'en' } = Astro.props;
+const t = translator(locale);
+const reviewers = ['NeurIPS 2026', 'ICLR 2027', 'ACL ARR 2026', 'NLPCC 2026'];
+---
+<section id="recognition" class="mx-auto max-w-7xl scroll-mt-28 px-5 py-12 sm:px-8" aria-labelledby="recognition-heading">
+  <p class="aurora-kicker mb-3 text-xs font-bold uppercase tracking-[0.34em]">{t('Recognition')}</p>
+  <h2 id="recognition-heading" class="aurora-heading mb-6 font-serif text-3xl tracking-[-0.04em] sm:text-4xl">{locale === 'zh' ? '荣誉与服务' : 'Merits & service'}</h2>
+  <div class="grid gap-6 border-y border-zinc-200 py-6 dark:border-line lg:grid-cols-2 lg:gap-10">
+    <div>
+      <h3 class="card-kicker mb-4">{locale === 'zh' ? '个人荣誉' : 'Personal merits'}</h3>
+      <ul class="space-y-4 text-sm leading-6">
+        <li class="grid gap-1 sm:grid-cols-[6rem_1fr] sm:gap-4">
+          <time datetime="2026-05" class="text-zinc-500 dark:text-mist">{locale === 'zh' ? '2026 年 5 月' : 'May 2026'}</time>
+          <span>{t('Top 10 Most Outstanding Hong Kong Student in GBA 2026')}</span>
+        </li>
+        <li class="grid gap-1 sm:grid-cols-[6rem_1fr] sm:gap-4">
+          <time datetime="2026-03" class="text-zinc-500 dark:text-mist">{locale === 'zh' ? '2026 年 3 月' : 'Mar 2026'}</time>
+          <span>{t('DSA Research Excellence Award 2025')} <span class="text-zinc-500 dark:text-mist">({t('Senior Student Track')})</span></span>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="card-kicker mb-4">{locale === 'zh' ? '学术服务' : 'Academic service'}</h3>
+      <dl class="space-y-4 text-sm leading-6">
+        <div class="grid gap-1 sm:grid-cols-[9rem_1fr] sm:gap-4">
+          <dt class="font-semibold">{locale === 'zh' ? '审稿人' : 'Reviewer'}</dt>
+          <dd class="text-zinc-600 dark:text-mist">{reviewers.join(' · ')}</dd>
+        </div>
+        <div class="grid gap-1 sm:grid-cols-[9rem_1fr] sm:gap-4">
+          <dt class="font-semibold">{locale === 'zh' ? '助教' : 'Teaching Assistant'}</dt>
+          <dd class="text-zinc-600 dark:text-mist">INFO5000 · {locale === 'zh' ? '2025 年秋季' : 'Fall 2025'}</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+---
+import Supervisors from '../ui/Supervisors.astro';
+import { translator, type Locale } from '../../i18n/ui';
+interface Props { locale?: Locale; }
+const { locale = 'en' } = Astro.props;
+const t = translator(locale);
+const companyDomain = locale === 'zh' ? 'paradoox.cn' : 'paradoox.ai';
+import IconLink from '../ui/IconLink';
+import { Mail, MapPin } from 'lucide-react';
+---
+<section class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+  <div>
+    <p class="aurora-kicker mb-6 text-xs font-bold uppercase tracking-[0.36em]">{t("AI, Data & FinTech")}</p>
+    <h1 class:list={[locale === 'zh' && 'chinese-hero', "max-w-5xl font-serif text-6xl leading-[0.92] tracking-[-0.06em] text-zinc-950 dark:text-white sm:text-7xl lg:text-8xl"]}>
+      {locale === 'zh' ? <>构建<span class="aurora-text">可信 AI</span>，让数据与决策更智能。</> : <>I build <span class="aurora-text">trustworthy AI</span> systems for data and decision intelligence.</>}
+    </h1>
+    <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-mist">
+      {locale === 'zh' ? '我是香港科技大学（广州）的博士候选人，' : 'Ph.D. Candidate at HKUST(GZ). '}<Supervisors locale={locale} />{' '}{locale === 'zh' ? '同时，我也是一名金融科技创业者，致力于推动可信的 AI 原生系统在金融领域的应用。' : 'I am also a FinTech entrepreneur advocating trustworthy AI-native systems in finance.'}
+      {' '}{locale === 'zh' ? '想进一步了解我们的创业公司？欢迎访问' : 'Want to learn more about our startup? Visit'}{' '}
+      <a href={`https://${companyDomain}/`} target="_blank" rel="noreferrer" class="font-semibold underline decoration-zinc-400 underline-offset-4 hover:decoration-current">{companyDomain}</a>{locale === 'zh' ? '。' : '.'}
+    </p>
+    <div class="mt-9 flex flex-wrap items-center gap-3">
+      <span class="inline-flex h-11 items-center gap-2 rounded-full border border-zinc-300 bg-white/60 px-4 text-sm font-medium text-zinc-700 dark:border-line dark:bg-white/[0.03] dark:text-mist">
+        <MapPin className="h-4 w-4" strokeWidth={1.7} />
+        GBA
+      </span>
+      <IconLink href="https://github.com/tigerlcl" label="GitHub" icon="github" />
+      <IconLink href="https://scholar.google.com/citations?user=qzEce6IAAAAJ&hl=en" label={t("Google Scholar")} icon="scholar" />
+      <IconLink href="https://www.linkedin.com/in/changlunli0718/" label={t("LinkedIn")} icon="linkedin" />
+    </div>
+    <dl class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm leading-6 text-zinc-600 dark:text-mist" aria-label={locale === 'zh' ? '咨询邮箱' : 'Inquiry emails'}>
+      <div class="flex min-w-0 flex-wrap items-center gap-x-2">
+        <dt class="inline-flex items-center gap-2 font-semibold"><Mail className="h-4 w-4 shrink-0" strokeWidth={1.7} aria-hidden="true" />{locale === 'zh' ? '学术咨询' : 'Academic'}:</dt>
+        <dd class="min-w-0"><a class="break-all underline decoration-zinc-400 underline-offset-4 hover:decoration-current" href="mailto:cli942@connect.hkust-gz.edu.cn">cli942@connect.hkust-gz.edu.cn</a></dd>
+      </div>
+      <div class="flex min-w-0 flex-wrap items-center gap-x-2">
+        <dt class="inline-flex items-center gap-2 font-semibold"><Mail className="h-4 w-4 shrink-0" strokeWidth={1.7} aria-hidden="true" />{locale === 'zh' ? '工作咨询' : 'Work'}:</dt>
+        <dd class="min-w-0"><a class="break-all underline decoration-zinc-400 underline-offset-4 hover:decoration-current" href="mailto:tiger@paradoox.ai">tiger@paradoox.ai</a></dd>
+      </div>
+    </dl>
+  </div>
+</section>

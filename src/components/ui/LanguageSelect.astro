@@ -1,0 +1,40 @@
+---
+import type { Locale } from '../../i18n/ui';
+interface Props { locale?: Locale; }
+const { locale = 'en' } = Astro.props;
+---
+<details class="relative" data-language-select>
+  <summary class="flex cursor-pointer list-none items-center gap-1.5 rounded-full border border-zinc-300 px-3 py-2 text-xs font-semibold text-zinc-700 transition hover:border-zinc-950 dark:border-line dark:text-mist dark:hover:border-white [&::-webkit-details-marker]:hidden" aria-label={locale === 'zh' ? '选择语言' : 'Select language'}>
+    {locale === 'zh' ? '中文' : 'EN'}
+    <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+  </summary>
+  <div class="absolute right-0 top-full z-50 mt-2 w-36 overflow-hidden rounded-xl border border-zinc-200 bg-white p-1 shadow-lg dark:border-line dark:bg-ink">
+    <a href="/" lang="en" aria-current={locale === 'en' ? 'true' : undefined} class:list={['flex items-center justify-between rounded-lg px-3 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-white/10', locale === 'en' && 'font-semibold']}>
+      English {locale === 'en' && <span aria-hidden="true">✓</span>}
+    </a>
+    <a href="/zh/" lang="zh-CN" aria-current={locale === 'zh' ? 'true' : undefined} class:list={['flex items-center justify-between rounded-lg px-3 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-white/10', locale === 'zh' && 'font-semibold']}>
+      简体中文 {locale === 'zh' && <span aria-hidden="true">✓</span>}
+    </a>
+  </div>
+</details>
+
+<script>
+  const dropdown = document.querySelector<HTMLDetailsElement>('[data-language-select]');
+  if (dropdown) {
+    document.addEventListener('click', (event) => {
+      if (event.target instanceof Node && !dropdown.contains(event.target)) dropdown.open = false;
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && dropdown.open) {
+        dropdown.open = false;
+        dropdown.querySelector('summary')?.focus();
+      }
+    });
+    dropdown.querySelectorAll<HTMLAnchorElement>('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        link.hash = window.location.hash;
+        dropdown.open = false;
+      });
+    });
+  }
+</script>

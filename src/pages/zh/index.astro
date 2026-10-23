@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AboutCards from '../../components/sections/AboutCards.astro';
+import Recognition from '../../components/sections/Recognition.astro';
+import Hero from '../../components/sections/Hero.astro';
+import PublicationList from '../../components/sections/PublicationList.astro';
+import Timeline from '../../components/sections/Timeline.astro';
+
+const publications = (await getCollection('publications')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout locale="zh">
+  <Hero locale="zh" />
+  <AboutCards locale="zh" />
+  <PublicationList publications={publications} locale="zh" />
+  <Timeline locale="zh" />
+  <Recognition locale="zh" />
+</BaseLayout>

@@ -1,0 +1,6 @@
+---
+import type { Locale } from '../../i18n/ui';
+interface Props { locale?: Locale; }
+const { locale = 'en' } = Astro.props;
+---
+{locale === 'zh' ? <>师从 <a class="underline decoration-zinc-400 underline-offset-4 hover:decoration-current" href="https://nantang.github.io/" target="_blank" rel="noreferrer">汤南教授</a>，由 <a class="underline decoration-zinc-400 underline-offset-4 hover:decoration-current" href="https://luoyuyu.vip/" target="_blank" rel="noreferrer">骆昱宇教授</a>共同指导。</> : <>Supervised by <a class="underline decoration-zinc-400 underline-offset-4 hover:decoration-current" href="https://nantang.github.io/" target="_blank" rel="noreferrer">Prof. Nan Tang</a> and co-supervised by <a class="underline decoration-zinc-400 underline-offset-4 hover:decoration-current" href="https://luoyuyu.vip/" target="_blank" rel="noreferrer">Prof. Yuyu Luo</a>.</>}

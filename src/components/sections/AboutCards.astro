@@ -1,0 +1,32 @@
+---
+import Supervisors from '../ui/Supervisors.astro';
+import { translator, type Locale } from '../../i18n/ui';
+interface Props { locale?: Locale; }
+const { locale = 'en' } = Astro.props;
+const t = translator(locale);
+const companyUrl = locale === 'zh' ? 'https://paradoox.cn/' : 'https://paradoox.ai/';
+---
+<section class="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <article class="info-card">
+      <p class="card-kicker">{t("Education")}</p>
+      <h3>{t("HKUST(GZ)")}</h3>
+      <p>{locale === 'zh' ? '数据科学与分析学域博士候选人，2024 年春季入学。' : 'Ph.D. Candidate, Data Science and Analytics Thrust. Spring intake, 2024. '}<Supervisors locale={locale} /></p>
+    </article>
+    <article class="info-card">
+      <p class="card-kicker">{t("Research")}</p>
+      <h3>{t("Good Data for AI")}</h3>
+      <p>{t("Data cleaning and transformation for reliable AI systems, including weak-to-strong prompting with MegaTran.")}</p>
+    </article>
+    <article class="info-card">
+      <p class="card-kicker">{t("Finance")}</p>
+      <h3>{t("Good AI for Funds")}</h3>
+      <p>{t("Live evaluation, trading-agent diagnostics, and strategy optimization through DeepFund, TradeLens, and EVOQUANT.")}</p>
+    </article>
+    <article class="info-card">
+      <p class="card-kicker">{t("Venture")}</p>
+      <h3><a href={companyUrl} target="_blank" rel="noreferrer" class="underline decoration-zinc-400 underline-offset-4 hover:decoration-current">{t("Paradoox AI")}</a></h3>
+      <p>{t("Founder & CEO, building enterprise SaaS for financial institutions to evaluate, diagnose, and manage AI agents.")}</p>
+    </article>
+  </div>
+</section>

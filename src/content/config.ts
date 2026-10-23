@@ -2,10 +2,6 @@ import { defineCollection, z } from 'astro:content';
 
 const publicationLinks = z.object({
   pdf: z.string().url().optional(),
-  code: z.string().url().optional(),
-  bibtex: z.string().optional(),
-  page: z.string().url().optional(),
-  slides: z.string().optional(),
 });
 
 const publications = defineCollection({
@@ -16,29 +12,14 @@ const publications = defineCollection({
     myName: z.string().default('Changlun Li'),
     venue: z.string(),
     venueShort: z.string(),
+    conference: z.enum(['emnlp2026', 'neurips2025', 'ijcai2025', 'vldb2025']),
     year: z.number(),
+    order: z.number(),
+    equalContribution: z.array(z.string()).default([]),
     category: z.enum(['AI / LLMs', 'AI for Finance']),
-    abstract: z.string(),
     links: publicationLinks.default({}),
     featured: z.boolean().default(false),
     note: z.string().optional(),
-  }),
-});
-
-const projects = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    tagline: z.string(),
-    description: z.string(),
-    stack: z.array(z.string()),
-    category: z.enum(['Model', 'Dataset', 'Benchmark', 'FinTech', 'Open Source']),
-    links: z.object({
-      github: z.string().url().optional(),
-      demo: z.string().url().optional(),
-      paper: z.string().url().optional(),
-    }).default({}),
-    featured: z.boolean().default(false),
   }),
 });
 
@@ -53,13 +34,4 @@ const blog = defineCollection({
   }),
 });
 
-const achievements = defineCollection({
-  type: 'content',
-  schema: z.object({
-    date: z.date(),
-    displayDate: z.string(),
-    briefing: z.string(),
-  }),
-});
-
-export const collections = { publications, projects, blog, achievements };
+export const collections = { publications, blog };

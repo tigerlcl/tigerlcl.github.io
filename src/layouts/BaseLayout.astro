@@ -1,28 +1,38 @@
 ---
 import '../styles/global.css';
-import ThemeToggle from '../components/ThemeToggle.astro';
+import { translator, type Locale } from '../i18n/ui';
+import ThemeToggle from '../components/ui/ThemeToggle.astro';
+import LanguageSelect from '../components/ui/LanguageSelect.astro';
 
 interface Props {
+  locale?: Locale;
   title?: string;
   description?: string;
 }
 
+const { locale = 'en' } = Astro.props;
+const t = translator(locale);
+const home = locale === 'zh' ? '/zh/' : '/';
 const {
-  title = 'Changlun Li | AI + Data Research',
-  description = 'Ph.D. candidate at HKUST(GZ) working on applied AI, LLMs, data transformation, and fund investment intelligence.',
+  title = 'Tiger Homepage',
+  description = 'Tiger Homepage',
 } = Astro.props;
 
 const googleAnalyticsId = 'G-9HLSWQ57HT';
 ---
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang={locale === 'zh' ? 'zh-CN' : 'en'} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <title>{title}</title>
+    {['/', '/zh', '/zh/'].includes(Astro.url.pathname) && <>
+      <link rel="alternate" hreflang="en" href={new URL('/', Astro.site)} />
+      <link rel="alternate" hreflang="zh-CN" href={new URL('/zh/', Astro.site)} />
+    </>}
     <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
     <script is:inline define:vars={{ googleAnalyticsId }}>
       window.dataLayer = window.dataLayer || [];
@@ -42,14 +52,17 @@ const googleAnalyticsId = 'G-9HLSWQ57HT';
     <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.10),transparent_32rem)] dark:block hidden"></div>
     <div class="fixed inset-0 -z-10 bg-[linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:72px_72px] opacity-40 dark:bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)]"></div>
     <header class="sticky top-0 z-50 border-b border-zinc-200/80 bg-zinc-50/80 backdrop-blur-xl dark:border-line dark:bg-ink/80">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="/" class="font-serif text-lg tracking-tight">Changlun Li, Tiger</a>
-        <div class="hidden items-center gap-7 text-sm text-zinc-600 dark:text-mist md:flex">
-          <a class="nav-link" href="/#publications">Research</a>
-          <a class="nav-link" href="/#artifacts">Artifacts</a>
-          <a class="nav-link" href="/#experience">Experience</a>
+      <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-y-3 px-5 py-4 sm:px-8">
+        <a href={home} class="font-serif text-lg tracking-tight">{t('Changlun Li, Tiger')}</a>
+        <div class="order-last flex w-full flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-600 dark:text-mist md:order-none md:w-auto md:gap-5">
+          <a class="nav-link" href={`${home}#publications`}>{t('Research')}</a>
+          <a class="nav-link" href={`${home}#experience`}>{t('Experience')}</a>
+          <a class="nav-link" href={`${home}#recognition`}>{t('Recognition')}</a>
         </div>
-        <ThemeToggle />
+        <div class="flex shrink-0 items-center gap-2 sm:gap-3">
+          <LanguageSelect locale={locale} />
+          <ThemeToggle locale={locale} />
+        </div>
       </nav>
     </header>
     <main>
@@ -57,7 +70,7 @@ const googleAnalyticsId = 'G-9HLSWQ57HT';
     </main>
     <footer class="mx-auto max-w-7xl px-5 py-12 text-sm text-zinc-500 dark:text-mist sm:px-8">
       <div class="border-t border-zinc-200 pt-8 dark:border-line">
-        © {new Date().getFullYear()} Changlun Li. Built with Astro, Tailwind CSS, and content collections.
+        © {new Date().getFullYear()} {locale === 'zh' ? '李昌伦。' : 'Changlun Li.'} {t('Built with Astro, Tailwind CSS, and content collections.')}
       </div>
     </footer>
   </body>

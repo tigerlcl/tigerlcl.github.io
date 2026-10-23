@@ -20,6 +20,7 @@
 
   html {
     text-rendering: geometricPrecision;
+    scroll-padding-top: 7rem;
   }
 }
 
@@ -82,11 +83,6 @@
     );
   }
 
-  .metric-card {
-    @apply rounded-2xl border border-zinc-200 bg-zinc-50 p-4 dark:border-line dark:bg-black/20;
-  }
-
-  .metric-card span,
   .card-kicker {
     @apply block text-[0.68rem] font-bold uppercase tracking-[0.28em];
     background-image: linear-gradient(90deg, var(--prussian-blue), var(--orange));
@@ -95,18 +91,12 @@
     color: transparent;
   }
 
-  :root.dark .metric-card span,
   :root.dark .card-kicker {
     background-image: linear-gradient(90deg, var(--alabaster-grey), #ffd08a, var(--orange));
     filter: drop-shadow(0 0 8px color-mix(in srgb, var(--orange) 18%, transparent));
   }
 
-  .metric-card strong {
-    @apply mt-2 block font-serif text-xl font-medium tracking-[-0.03em];
-  }
-
   .info-card,
-  .bento-card,
   .publication-card {
     @apply rounded-[1.6rem] border border-zinc-200 bg-white/75 p-6 transition duration-300 dark:border-line dark:bg-white/[0.035];
   }
@@ -119,17 +109,32 @@
     @apply mt-3 text-sm leading-7 text-zinc-600 dark:text-mist;
   }
 
-  .bento-card {
-    @apply flex min-h-64 flex-col p-7 hover:-translate-y-1;
-  }
-
-  .bento-card:hover,
   .publication-card:hover {
     border-color: var(--orange);
   }
 
-  .publication-card {
-    @apply p-6;
+  .paper-block {
+    @apply grid w-full min-w-0 gap-5 rounded-none p-5 sm:p-6 lg:p-8;
+    grid-template-columns: minmax(0, 1fr);
+
+  }
+
+  .paper-meta {
+    @apply flex items-center gap-4;
+  }
+
+  @media (min-width: 768px) {
+    .paper-block {
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 2rem;
+    }
+    .paper-meta {
+      @apply flex-col items-start gap-4;
+    }
+  }
+
+  .paper-block[hidden] {
+    display: none;
   }
 
   .filter-pill {
@@ -153,14 +158,15 @@
     color: var(--black);
   }
 
-  .tech-badge {
-    @apply rounded-full px-3 py-1 text-xs font-semibold;
-    border: 1px solid color-mix(in srgb, var(--orange) 34%, transparent);
-    color: var(--prussian-blue);
-  }
+}
 
-  :root.dark .tech-badge {
-    color: var(--alabaster-grey);
-    border-color: color-mix(in srgb, var(--orange) 48%, transparent);
-  }
+/* Keep Chinese headings readable without Latin display-font spacing. */
+:lang(zh-CN) .font-serif {
+  font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+:lang(zh-CN) .chinese-hero {
+  font-size: clamp(2.75rem, 6vw, 5rem);
+  line-height: 1.2;
 }
