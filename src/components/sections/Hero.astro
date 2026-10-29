@@ -1,5 +1,6 @@
 ---
 import Supervisors from '../ui/Supervisors.astro';
+import HeroGallery from './HeroGallery.astro';
 import { translator, type Locale } from '../../i18n/ui';
 interface Props { locale?: Locale; }
 const { locale = 'en' } = Astro.props;
@@ -9,9 +10,10 @@ import IconLink from '../ui/IconLink';
 import { Mail, MapPin } from 'lucide-react';
 ---
 <section class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
-  <div>
+  <div class="grid items-center gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-12 xl:gap-16">
+  <div class="min-w-0">
     <p class="aurora-kicker mb-6 text-xs font-bold uppercase tracking-[0.36em]">{t("AI, Data & FinTech")}</p>
-    <h1 class:list={[locale === 'zh' && 'chinese-hero', "max-w-5xl font-serif text-6xl leading-[0.92] tracking-[-0.06em] text-zinc-950 dark:text-white sm:text-7xl lg:text-8xl"]}>
+    <h1 class:list={[locale === 'zh' && 'chinese-hero', "max-w-5xl font-serif text-6xl leading-[0.98] tracking-[-0.06em] text-zinc-950 dark:text-white sm:text-7xl lg:text-[4.5rem] xl:text-[5.25rem]"]}>
       {locale === 'zh' ? <>构建<span class="aurora-text">可信 AI</span>，让数据与决策更智能。</> : <>I build <span class="aurora-text">trustworthy AI</span> systems for data and decision intelligence.</>}
     </h1>
     <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-mist">
@@ -38,5 +40,7 @@ import { Mail, MapPin } from 'lucide-react';
         <dd class="min-w-0"><a class="break-all underline decoration-zinc-400 underline-offset-4 hover:decoration-current" href="mailto:tiger@paradoox.ai">tiger@paradoox.ai</a></dd>
       </div>
     </dl>
+  </div>
+  <HeroGallery locale={locale} />
   </div>
 </section>

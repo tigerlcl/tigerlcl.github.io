@@ -13,7 +13,7 @@ const zh: Record<string, string> = {
   "Ph.D. Candidate at the Data Science and Analytics Thrust, supervised by Prof. Nan Tang and co-supervised by Prof. Yuyu Luo.": "数据科学与分析学域博士候选人，师从 Nan Tang 教授，由 Yuyu Luo 教授共同指导。",
   "Data cleaning and transformation for reliable AI systems, including weak-to-strong prompting with MegaTran.": "研究面向可靠 AI 系统的数据清洗与转换，包括 MegaTran 中由弱到强的提示方法。",
   "Finance": "金融智能",
-  "Good AI for Funds": "以可信 AI 助力投资",
+  "Good AI for Finance": "以可信 AI 助力金融",
   "Live evaluation, trading-agent diagnostics, and strategy optimization through DeepFund, TradeLens, and EVOQUANT.": "通过 DeepFund、TradeLens 和 EVOQUANT，探索实时评测、交易智能体诊断与策略优化。",
   "Venture": "创业",
   "Paradoox AI": "悖论慧金",

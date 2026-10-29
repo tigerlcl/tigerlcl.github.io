@@ -26,6 +26,7 @@ npm run preview
 .github/workflows/deploy.yml      GitHub Pages deployment
 public/
   favicon.png                    Browser icon
+  images/gallery/                Personal photos for the hero gallery
   images/logos/
     organizations/               University and company logos
     conferences/                 Conference logos
@@ -66,6 +67,24 @@ Dependencies (`node_modules/`), generated types/cache (`.astro/`), and build out
 
 Both homepages use the same components. Verify both languages after content or
 layout changes. Company links use `paradoox.ai` in English and `paradoox.cn` in Chinese.
+
+## Personal gallery photos
+
+Place personal photos in `public/images/gallery/`. The homepage automatically
+displays them on the right side of the hero on desktop and below the introduction
+on smaller screens, in both languages. Photos slide one at a time in filename
+order, advancing every three seconds with a continuous loop. Arrows and photo dots
+allow manual navigation; the pause button stops autoplay. Autoplay also pauses
+on hover, keyboard focus, or when the gallery is offscreen or the tab is hidden.
+Reduced-motion preferences disable autoplay and slide transitions by default.
+
+Use JPG, PNG, WebP, or AVIF files with descriptive names, for example
+`01-conference.jpg` and `02-campus.webp`. Number prefixes can indicate the desired
+display order. Astro generates responsive WebP images at build time; the original
+photos open in a new tab when clicked. Photos placed here will be publicly
+accessible when the site is deployed. Keep `.gitkeep` so Git retains the folder
+while it is empty. Edit descriptions in `src/components/sections/HeroGallery.astro`
+to provide descriptive English and Chinese alternative text for new photos.
 
 ## Logo sources
 
