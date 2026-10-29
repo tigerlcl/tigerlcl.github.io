@@ -19,6 +19,6 @@ year: 2025
 equalContribution: ["Changlun Li", "Yao Shi"]
 category: "AI for Finance"
 links:
-  pdf: "https://arxiv.org/pdf/2505.11065"
+  pdf: "https://neurips.cc/virtual/2025/loc/san-diego/poster/121642"
 featured: true
 ---

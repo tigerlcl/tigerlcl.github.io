@@ -8,5 +8,5 @@ conference: emnlp2026
 year: 2026
 order: 1
 category: "AI for Finance"
-links: {"pdf": "https://arxiv.org/abs/2607.12455"}
+links: {"pdf": "https://aclanthology.org/2026.finnlp-1.60/"}
 ---
