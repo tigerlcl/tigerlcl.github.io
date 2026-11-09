@@ -3,7 +3,7 @@ import { translator, type Locale } from '../../i18n/ui';
 interface Props { locale?: Locale; }
 const { locale = 'en' } = Astro.props;
 const t = translator(locale);
-const reviewers = ['NeurIPS 2026', 'ICLR 2027', 'ACL ARR 2026', 'NLPCC 2026'];
+const reviewers = ['ICLR 2027', 'NeurIPS 2026', 'ARR 2026', 'EMNLP 2026'];
 ---
 <section id="recognition" class="mx-auto max-w-7xl scroll-mt-28 px-5 py-12 sm:px-8" aria-labelledby="recognition-heading">
   <p class="aurora-kicker mb-3 text-xs font-bold uppercase tracking-[0.34em]">{t('Recognition')}</p>
@@ -31,7 +31,7 @@ const reviewers = ['NeurIPS 2026', 'ICLR 2027', 'ACL ARR 2026', 'NLPCC 2026'];
         </div>
         <div class="grid gap-1 sm:grid-cols-[9rem_1fr] sm:gap-4">
           <dt class="font-semibold">{locale === 'zh' ? '助教' : 'Teaching Assistant'}</dt>
-          <dd class="text-zinc-600 dark:text-mist">INFO5000 · {locale === 'zh' ? '2025 年秋季' : 'Fall 2025'}</dd>
+          <dd class="text-zinc-600 dark:text-mist">INFO5000 · {locale === 'zh' ? '2024 年秋季' : 'Fall 2024'}</dd>
         </div>
       </dl>
     </div>
