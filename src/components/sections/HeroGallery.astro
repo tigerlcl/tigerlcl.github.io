@@ -9,20 +9,18 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   '../../../public/images/gallery/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}',
   { eager: true },
 );
-const descriptions: Record<string, { en: string; zh: string }> = {
-  '1.jpg': { en: 'Sharing ideas during a seated discussion', zh: '在座谈中交流想法' },
-  '2.jpg': { en: 'Speaking at a workshop beside a whiteboard', zh: '在工作坊的白板旁分享' },
-  '3.jpg': { en: 'A moment at a conference', zh: '学术会议上的留影' },
-  '4.jpg': { en: 'Speaking at an entrepreneurship event', zh: '在创业活动中分享' },
-};
 const photos = Object.entries(images)
-  .sort(([a], [b]) => a.localeCompare(b, 'en', { numeric: true }))
-  .map(([path, image], index) => {
+  .sort(([a], [b]) => {
+    // Lead with the entrepreneurship photo; keep the rest in filename order.
+    if (a.endsWith('/4.jpg')) return -1;
+    if (b.endsWith('/4.jpg')) return 1;
+    return a.localeCompare(b, 'en', { numeric: true });
+  })
+  .map(([path, image]) => {
     const filename = path.split('/').pop()!;
     return {
       image: image.default,
       original: `/images/gallery/${encodeURIComponent(filename)}`,
-      alt: descriptions[filename]?.[locale] ?? (locale === 'zh' ? `个人照片 ${index + 1}` : `Personal photo ${index + 1}`),
     };
   });
 ---
@@ -32,10 +30,10 @@ const photos = Object.entries(images)
       <div class="gallery-track" data-gallery-track>
         {photos.map((photo, index) => (
           <div class="gallery-slide" data-gallery-slide role="group" aria-roledescription={locale === 'zh' ? '照片' : 'slide'} aria-label={`${index + 1} / ${photos.length}`} aria-hidden={index !== 0 ? 'true' : undefined}>
-            <a href={photo.original} target="_blank" rel="noreferrer" tabindex={index === 0 ? 0 : -1} aria-label={`${photo.alt} — ${locale === 'zh' ? '查看完整照片（在新标签页打开）' : 'View full photo (opens in a new tab)'}`}>
+            <a href={photo.original} target="_blank" rel="noreferrer" tabindex={index === 0 ? 0 : -1} aria-label={locale === 'zh' ? '查看完整照片（在新标签页打开）' : 'View full photo (opens in a new tab)'}>
               <Image
                 src={photo.image}
-                alt={photo.alt}
+                alt=""
                 width={1200}
                 widths={[480, 800, 1200]}
                 sizes="(min-width: 1280px) 313.6px, (min-width: 1024px) 26.6vw, (min-width: 640px) 403.2px, calc(70vw - 28px)"

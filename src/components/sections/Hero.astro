@@ -13,8 +13,8 @@ import { Mail, MapPin } from 'lucide-react';
   <div class="grid items-center gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-12 xl:gap-16">
   <div class="min-w-0">
     <p class="aurora-kicker mb-6 text-xs font-bold uppercase tracking-[0.36em]">{t("AI, Data & FinTech")}</p>
-    <h1 class:list={[locale === 'zh' && 'chinese-hero', "max-w-5xl font-serif text-6xl leading-[0.98] tracking-[-0.06em] text-zinc-950 dark:text-white sm:text-7xl lg:text-[4.5rem] xl:text-[5.25rem]"]}>
-      {locale === 'zh' ? <>构建<span class="aurora-text">可信 AI</span>，让数据与决策更智能。</> : <>I build <span class="aurora-text">trustworthy AI</span> systems for data and decision intelligence.</>}
+    <h1 class:list={[locale === 'zh' && 'chinese-hero', "max-w-5xl font-serif text-5xl leading-[0.98] tracking-[-0.06em] [text-wrap:balance] text-zinc-950 dark:text-white sm:text-6xl lg:text-[4rem] xl:text-[4.5rem]"]}>
+      {locale === 'zh' ? <>构建<span class="aurora-text">可信 AI</span><br />让数据与决策更智能</> : <>I build <span class="aurora-text">trustworthy AI</span> systems for data and decision intelligence.</>}
     </h1>
     <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-mist">
       {locale === 'zh' ? '我是香港科技大学（广州）的博士候选人，' : 'Ph.D. Candidate at HKUST(GZ). '}<Supervisors locale={locale} />{' '}{locale === 'zh' ? '同时，我也是一名金融科技创业者，致力于推动可信的 AI 原生系统在金融领域的应用。' : 'I am also a FinTech entrepreneur advocating trustworthy AI-native systems in finance.'}

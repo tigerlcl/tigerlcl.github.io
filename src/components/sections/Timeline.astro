@@ -9,8 +9,8 @@ import SectionHeading from '../ui/SectionHeading.astro';
 
 
 const items = [
-  { period: 'Aug 2025 – Present', title: 'Founder & CEO', href: companyUrl, org: 'Paradoox AI · Guangzhou', detail: 'Enterprise SaaS for agent evaluation, diagnosis, and management in financial institutions, bridging KYC to KYA (Know Your Agent).', logo: '/images/logos/organizations/paradoox-ai.png', logoAlt: 'Paradoox AI logo', logoClass: 'h-9 w-9' },
-  { period: 'Jan 2024 – Present', education: true, title: 'Ph.D. Candidate', org: 'HKUST(GZ), Guangzhou', detail: 'Supervised by Prof. Nan Tang and co-supervised by Prof. Yuyu Luo. Research interests: AI agents for fund investment and data cleaning.', logo: '/images/logos/organizations/hkust.svg', logoAlt: 'HKUST logo', logoClass: 'h-9 w-6' },
+  { period: 'Aug 2025 – Present', title: 'Founder & CEO', href: companyUrl, org: 'Paradoox AI · The Great Bay Area', detail: 'Enterprise SaaS for agent evaluation, diagnosis, and management in financial institutions, bridging KYC to KYA (Know Your Agent).', logo: '/images/logos/organizations/paradoox-ai.png', logoAlt: 'Paradoox AI logo', logoClass: 'h-9 w-9' },
+  { period: 'Jan 2024 – Present', education: true, title: 'Ph.D. Candidate', org: 'HKUST(GZ), Guangzhou', detail: 'Supervised by Prof. Nan Tang and co-supervised by Prof. Yuyu Luo. Research interests: LLM applications and benchmarks for data cleaning and financial tasks.', logo: '/images/logos/organizations/hkust.svg', logoAlt: 'HKUST logo', logoClass: 'h-9 w-6' },
   { period: 'Jul 2020 – Jan 2024', title: 'Data Scientist', org: 'Measurable AI · Hong Kong', detail: 'Transformed receipt data into alternative insights for market analysis and portfolio management.', logo: '/images/logos/organizations/measurable-ai.jpeg', logoAlt: 'Measurable AI logo', logoClass: 'h-8 w-8 rounded-md' },
   { period: 'Feb – Jul 2018', title: 'Exchange Student', org: 'Tsinghua University · Beijing', detail: 'Exchange program in the Department of Electrical Engineering.', logo: '/images/logos/organizations/tsinghua.png', logoAlt: 'Tsinghua University logo', logoClass: 'h-9 w-9' },
   { period: 'Sep 2015 – Jul 2020', title: 'B.Eng. in Information Engineering', org: 'The Chinese University of Hong Kong', detail: 'Minor in Computer Science.', logo: '/images/logos/organizations/cuhk.png', logoAlt: 'CUHK logo', logoClass: 'h-9 w-9' },
@@ -27,7 +27,7 @@ const items = [
         <p class="text-xs font-bold uppercase tracking-[0.28em] text-zinc-500 dark:text-mist">{t(item.period)}</p>
         <h3 class="mt-2 font-serif text-2xl tracking-[-0.03em]">{t(item.title)}</h3>
         <p class="mt-1 text-sm font-semibold text-zinc-700 dark:text-zinc-200">{item.href ? <a href={item.href} target="_blank" rel="noreferrer" class="underline decoration-zinc-400 underline-offset-4 hover:decoration-current">{t(item.org)}</a> : t(item.org)}</p>
-        <p class="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-mist">{item.education ? <>{locale === 'zh' ? '2024 年春季入学。' : 'Spring intake, 2024. '}<Supervisors locale={locale} />{' '}{locale === 'zh' ? '研究方向为基金投资 AI 智能体与数据清洗。' : 'Research interests: AI agents for fund investment and data cleaning.'}</> : t(item.detail)}</p>
+        <p class="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-mist">{item.education ? <>{locale === 'zh' ? '2024 年春季入学。' : 'Spring intake, 2024. '}<Supervisors locale={locale} />{' '}{locale === 'zh' ? '研究方向为大语言模型应用，以及数据清洗与金融任务的基准评测。' : 'Research interests: LLM applications and benchmarks for data cleaning and financial tasks.'}</> : t(item.detail)}</p>
       </article>
     ))}
   </div>
